@@ -1,38 +1,181 @@
-.App {
-  text-align: center;
+body {
+  background-image: url("http://www.pixelstalk.net/wp-content/uploads/2016/07/Free-Download-Weather-Wallpaper.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: "Roboto", sans-serif;
+  background-color: #f9f7fe;
+}
+a {
+  color: #53a8b6;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.weather-app {
+  background: white;
+  max-width: 600px;
+  margin: 45px auto;
+  box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+  border-radius: 16px;
+  padding: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header {
+  border-bottom: 1px solid #f9f7fe;
+  padding: 0 0 30px 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.search-form-input {
+  background-color: #f9f7fe;
+  border: none;
+  border-radius: 6px;
+  width: 80%;
+  font-size: 16px;
+  padding: 15px 20px;
+}
+
+.search-form-button {
+  background: #79c2d0;
+  padding: 15px 30px;
+  border: none;
+  font-size: 16px;
+  margin-left: 5px;
+  border-radius: 6px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+main {
+  padding: 30px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.weather-app-data {
+  display: flex;
+  justify-content: space-between;
+}
+
+.weather-app-city {
+  margin: 0;
+  font-size: 38px;
+  line-height: 48px;
+}
+
+.weather-app-details {
+  font-size: 16px;
+  color: rgba(39, 33, 66, 0.4);
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.weather-app-details strong {
+  color: #5585b5;
+}
+
+.weather-app-temperature-container {
+  display: flex;
+}
+
+.weather-app-icon {
+  width: 88px;
+  height: 88px;
+}
+
+.weather-app-temperature {
+  font-size: 88px;
+  line-height: 88px;
+  font-weight: bold;
+}
+
+.weather-app-unit {
+  margin-top: 6px;
+  font-size: 28px;
+}
+
+.weather-forecast {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.weather-forecast-date {
+  text-align: center;
+  color: rgba(39, 33, 66, 0.4);
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+.weather-forecast-icon {
+  width: 88px;
+  height: 88px;
+  display: block;
+  margin: 0 auto;
+}
+.weather-forecast-temperatures {
+  text-align: center;
+  color: #79c2d0;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.weather-forecast-temperature {
+  padding: 0 10px;
+}
+
+footer {
+  border-top: 1px solid #f9f7fe;
+  padding: 30px 0 0 0;
+  text-align: center;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.6);
+}
+@media (max-width: 768px) {
+  .weather-app {
+    margin: 20px;
+    padding: 20px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .weather-app-data {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .weather-app-temperature-container {
+    margin-top: 20px;
+    justify-content: center;
+  }
+
+  .weather-app-temperature {
+    font-size: 64px;
+  }
+
+  .weather-app-unit {
+    font-size: 24px;
+    margin-top: 4px;
+  }
+
+  .weather-forecast {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .weather-forecast-day {
+    width: 40%;
+    margin-bottom: 20px;
+  }
+
+  .search-form-input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .search-form-button {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  header {
+    text-align: center;
   }
 }
