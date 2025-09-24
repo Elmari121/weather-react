@@ -15,6 +15,18 @@ const config = {
   "framework": {
     "name": "@storybook/react-vite",
     "options": {}
+  },
+  "core": {
+    "disableTelemetry": true
+  },
+  "viteFinal": async (config) => {
+    // Enable CSS modules and handle CSS imports
+    config.css = config.css || {};
+    config.css.modules = {
+      localsConvention: 'camelCase'
+    };
+    
+    return config;
   }
 };
 export default config;
